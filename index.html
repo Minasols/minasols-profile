@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>minasol's profile</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="page-wrap">
+<table id="layout" cellspacing="0" cellpadding="0">
+
+  <tr>
+    <td colspan="2" id="banner">
+      <marquee behavior="scroll" direction="left" scrollamount="5">
+        <span id="banner-text"></span>
+      </marquee>
+    </td>
+  </tr>
+
+  <tr>
+    <td id="col-left">
+
+      <div id="profile-pic-frame">
+        <img id="profile-pic" src="" alt="profile picture">
+        <div id="display-name"></div>
+        <div id="tagline"></div>
+        <div id="status-line">
+          <span class="status-dot" id="status-dot"></span>
+          <span id="status-label"></span>
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-header">Contacting <span id="contact-name-echo"></span></div>
+        <div class="module-body contact-icons" id="contact-icons"></div>
+      </div>
+
+      <div class="module">
+        <div class="module-header">General Info</div>
+        <div class="module-body">
+          <table id="general-info-table"></table>
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-header">Music</div>
+        <div class="module-body">
+          <div id="music-player">
+            <div class="now-playing"><span class="note">&#9835;</span> Now Playing: <span id="now-playing-text"></span></div>
+            <audio id="audio-player" controls></audio>
+            <ul id="playlist"></ul>
+          </div>
+        </div>
+      </div>
+
+    </td>
+
+    <td id="col-main">
+
+      <div class="module">
+        <div class="module-header">About Me</div>
+        <div class="module-body" id="about-me-body"></div>
+      </div>
+
+      <div class="module">
+        <div class="module-header">Who I'd Like to Meet</div>
+        <div class="module-body" id="wilm-body"></div>
+      </div>
+
+      <div class="module">
+        <div class="module-header">Interests</div>
+        <div class="module-body">
+          <table id="interests-table"></table>
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-header">Top 8 Friends</div>
+        <div class="module-body">
+          <div id="friends-grid"></div>
+          <div class="friend-view-link"><a href="#">view all friends &raquo;</a></div>
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-header"><span id="comment-count">0</span> Comments</div>
+        <div class="module-body">
+          <div id="comments-list"></div>
+          <hr class="divider">
+          <form id="comment-form">
+            <div><strong>leave a comment:</strong></div>
+            <input type="text" id="comment-name-input" placeholder="your name" style="width:100%;margin:4px 0;padding:4px;font-family:inherit;font-size:11px;border:1px solid var(--module-border);">
+            <textarea id="comment-body-input" rows="3" placeholder="say something nice..."></textarea>
+            <button type="submit">Post Comment</button>
+          </form>
+        </div>
+      </div>
+
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" id="footer">
+      <div>Made with plain HTML/CSS. No frameworks were harmed in the making of this page.</div>
+      <div style="margin-top:6px;">
+        visitors: <span id="visitor-counter" class="visitor-counter"></span>
+      </div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/render.js"></script>
+</body>
+</html>
