@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>minasol's profile</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- =========================================================
+     TOP CHROME: two-row navbar imitating myspace.com circa 2008
+     ========================================================= -->
+<div id="navbar-row1">
+  <div id="navbar-inner">
+    <div id="logo-slot" class="icon-slot" title="Place logo image at assets/img/icons/logo.png">
+      <span class="icon-slot-label">[LOGO]</span>
+    </div>
+    <div id="user-shortcuts">User Shortcuts <span class="caret">▾</span></div>
+    <div id="topsearch">
+      <input type="text" id="topsearch-input">
+      <select id="topsearch-scope">
+        <option>Web</option>
+        <option>MySpace</option>
+      </select>
+      <button id="topsearch-btn">Search</button>
+      <div id="powered-by">Powered By Google</div>
+    </div>
+  </div>
+</div>
+
+<div id="navbar-row2">
+  <div id="navbar-inner">
+    <nav id="main-nav">
+      <a href="#" class="current">Home</a>
+      <a href="#">Mail <span class="caret">▾</span></a>
+      <a href="#">Profile <span class="caret">▾</span></a>
+      <a href="#">Friends <span class="caret">▾</span></a>
+      <a href="#">Music</a>
+      <a href="#">Video</a>
+      <a href="#">More <span class="caret">▾</span></a>
+    </nav>
+    <nav id="account-nav">
+      <a href="#">My Account</a>
+      <a href="#">Sign Out</a>
+    </nav>
+  </div>
+</div>
+
+<div id="banner">
+  <marquee behavior="scroll" direction="left" scrollamount="5">
+    <span id="banner-text"></span>
+  </marquee>
+</div>
+
+<!-- =========================================================
+     PAGE BODY
+     ========================================================= -->
+<div id="page-wrap">
+<table id="layout" cellspacing="0" cellpadding="0">
+
+  <tr>
+    <td id="col-left">
+
+      <div id="profile-pic-frame">
+        <img id="profile-pic" src="" alt="profile picture">
+      </div>
+
+      <h1 id="display-name"></h1>
+      <div id="tagline"></div>
+
+      <table id="basic-stats-table"></table>
+
+      <div id="status-line">
+        <span class="icon-slot online-icon-slot" title="Place icon at assets/img/icons/online-now.png">
+          <span class="icon-slot-label">●</span>
+        </span>
+        <span id="status-label"></span>
+      </div>
+      <div id="last-login">Last Login: <span id="last-login-value"></span></div>
+
+      <div id="view-my-links">
+        View My: <a href="#">Pics</a> | <a href="#">Videos</a>
+      </div>
+
+      <div class="module">
+        <div class="module-header module-header-blue">Contacting <span id="contact-name-echo"></span></div>
+        <div class="module-body">
+          <table id="contact-icons-table"></table>
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-header module-header-blue">MySpace URL:</div>
+        <div class="module-body">
+          <a id="myspace-url-link" href="#"></a>
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-header module-header-blue"><span id="contact-name-echo-2"></span>'s Interests</div>
+        <div class="module-body module-body-blue">
+          <table id="interests-table"></table>
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-header module-header-blue">General Info</div>
+        <div class="module-body">
+          <table id="general-info-table"></table>
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-header module-header-blue">Music</div>
+        <div class="module-body">
+          <div id="music-player">
+            <div class="now-playing"><span class="note">&#9835;</span> Now Playing: <span id="now-playing-text"></span></div>
+            <audio id="audio-player" controls></audio>
+            <ul id="playlist"></ul>
+          </div>
+        </div>
+      </div>
+
+    </td>
+
+    <td id="col-main">
+
+      <div id="network-box">
+        <span id="network-label"></span>
+      </div>
+
+      <div id="blog-box">
+        <div id="blog-latest-line">
+          <span id="contact-name-echo-3"></span>'s Latest Blog Entry
+          [<a id="blog-subscribe-link" href="#">Subscribe to this Blog</a>]
+        </div>
+        <div id="blog-latest-title"></div>
+        <div id="blog-all-line">[<a id="blog-all-link" href="#">View All Blog Entries</a>]</div>
+      </div>
+
+      <div class="module">
+        <div class="module-header module-header-peach"><span id="contact-name-echo-4"></span>'s Blurbs</div>
+        <div class="module-body">
+          <div class="blurb-subhead">About me:</div>
+          <div id="about-me-body"></div>
+          <div class="blurb-subhead">Who I'd like to meet:</div>
+          <div id="wilm-body"></div>
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-header module-header-peach"><span id="contact-name-echo-5"></span>'s Friend Space (Top 8)</div>
+        <div class="module-body">
+          <div id="friend-count-line"><span id="contact-name-echo-6"></span> has <span id="friend-count-value"></span> friends.</div>
+          <div id="friends-grid"></div>
+          <div class="friend-view-link"><a href="#">view all friends &raquo;</a></div>
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-header module-header-peach"><span id="comment-count">0</span> Comments</div>
+        <div class="module-body">
+          <div id="comments-list"></div>
+          <hr class="divider">
+          <form id="comment-form">
+            <div><strong>leave a comment:</strong></div>
+            <input type="text" id="comment-name-input" placeholder="your name" class="text-input">
+            <textarea id="comment-body-input" rows="3" placeholder="say something nice..."></textarea>
+            <button type="submit">Post Comment</button>
+          </form>
+        </div>
+      </div>
+
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" id="footer">
+      <div>Made with plain HTML/CSS. No frameworks were harmed in the making of this page.</div>
+      <div style="margin-top:6px;">
+        visitors: <span id="visitor-counter" class="visitor-counter"></span>
+      </div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/render.js"></script>
+</body>
+</html>
